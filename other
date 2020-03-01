@@ -1,1 +1,40 @@
 tab + custom html widget on right side
+
+
+==============================================================
+https://codepen.io/bigwilliam/pen/bdNKEM
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<nav>
+  <ul class="nav">
+    <li><a href="#">Menu item 1</a></li>
+    <li><a href="#">Menu item 2</a></li>
+    <li>
+      <a href="#">Menu item with submenu</a>
+      <ul class="sub-menu">
+        <li><a href="#">Submenu item</a></li>
+        <li><a href="#">Submenu item</a></li>
+        <li><a href="#">Submenu item</a>
+		             <ul class="sub-menu">
+					<li><a href="#">Submenu item</a></li>
+					<li><a href="#">Submenu item</a></li>
+					<li><a href="#">Submenu item</a></li>
+				  </ul>
+		
+		</li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<script>
+$('.nav li .sub-menu  .sub-menu').parent().hover(function() {
+  var submenu = $(this).children('.sub-menu');
+  if ( $(submenu).is(':hidden') ) {
+    $(submenu).slideDown(200);
+  } else {
+    $(submenu).slideUp(200);
+  }
+});
+</script>
