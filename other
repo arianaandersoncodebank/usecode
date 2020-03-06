@@ -1,3 +1,90 @@
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="input-container">
+                          <div id="doctorname_div">					  
+                         <input class="input-field" name="doctorname" title="Employees Search" type="text" id="search_by_doctorname" placeholder="Search By Doctor Name">
+                         </div>
+						 <div id="specialty_div">
+                         <select name="doctorSpecialty" id="search_by_specialty" tabindex="-1" class="select2" aria-hidden="true">
+                                <option value="">Specialty</option>
+                                <option value="Pain Management">Pain Management</option>
+                                <option value="Behavioral Health">Behavioral Health</option>
+                                <option value="Dental">Dental</option>
+                                <option value="Family Medicine &amp; Primary Care">Family Medicine &amp; Primary Care</option>
+                                <option value="Internal Medicine">Internal Medicine</option>
+                                <option value="Women&#39;s Health">Women's Health</option>
+                                <option value="Pediatrics">Pediatrics</option>
+                                <option value="Opthalmology">Opthalmology</option>
+                                <option value="Pulmonary">Pulmonary</option>
+                                <option value="Rheumatology">Rheumatology</option>
+                                <option value="Nephrology">Nephrology</option>
+                                <option value="General Surgery">General Surgery</option>
+                                <option value="Otalaryngology">Otalaryngology</option>
+                                <option value="Family Medicine/Travel and Tropical Medicine">Family Medicine/Travel and Tropical Medicine</option>
+                                <option value="Neurology">Neurology</option>
+                                <option value="Orthopedic Surgery">Orthopedic Surgery</option>
+                                <option value="Adult Psychotherapy and Integrated Behavioral Health">Adult Psychotherapy and Integrated Behavioral Health</option>
+                                <option value="Obstetrics and Gynecology">Obstetrics and Gynecology</option>
+                       </select>
+                        </div>
+						<div id="location_div">
+                        <select name="doctorLocation" id="search_by_location" class="select2" tabindex="-1" aria-hidden="true">
+                              <option value="">Location</option>
+                              <option value="Family Birth Center – Maple Grove Hospital">Family Birth Center – Maple Grove Hospital</option>
+                              <option value="family-birth-center-north-memorial-health-hospital">Family Birth Center – North Memorial Health Hospital</option>
+                              <option value="Maple Grove Hospital">Maple Grove Hospital</option>
+                              <option value="North Memorial Health Hospital">North Memorial Health Hospital</option>
+                              <option value="Monticello Cancer Center">Monticello Cancer Center</option>
+                              <option value="Neonatal Intensive Care Unit (NICU) – Maple Grove Hospital">Neonatal Intensive Care Unit (NICU) – Maple Grove Hospital</option>
+                              <option value="Neonatal Intensive Care Unit (NICU) – North Memorial Health Hospital">Neonatal Intensive Care Unit (NICU) – North Memorial Health Hospital</option>
+                              <option value="North Memorial Health Clinic - Maple Grove">North Memorial Health Clinic - Maple Grove</option>
+                              <option value="North Memorial Health Cancer Center – Robbinsdale">North Memorial Health Cancer Center – Robbinsdale</option>                  
+                         </select>
+				         </div>
+
+<style>
+#specialty_div,#location_div{
+          display:none;
+}
+
+#location_div .select2.select2-container.select2-container--default{
+	      width:100%!important;
+}
+
+</style>
+
+<script>jQuery(document).ready(function($) {
+    $('#specialty_div,#location_div').hide();
+    $('#searchByName').click(function() {
+        $('#doctorname_div,#specialty_div,#location_div').hide();        
+        $('#doctorname_div').show();
+    })
+    $('#searchBySpecialty').click(function() {
+        $('#doctorname_div,#specialty_div,#location_div').hide();           
+        $('#specialty_div').show();
+    })
+    $('#searchByLocation').click(function() {       
+        $('#doctorname_div,#specialty_div,#location_div').hide();   
+        $('#location_div').show();
+    })
+})</script>
+
+==========================================================================================
+==========================================================================================
+==========================================================================================
+==========================================================================================
+==========================================================================================
+
 https://www.sitepoint.com/adding-ajax-to-your-wordpress-plugin/
 
 https://www.w3schools.com/graphics/google_maps_basic.asp
